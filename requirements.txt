@@ -5,6 +5,7 @@ jupyter_dash
 dash-renderer>=1.5.1
 dash-html-components>=1.0.3
 dash-core-components>=1.10.1
+dash_bootstrap_components
 numpy>=1.18.1
 pandas>=1.0.5
 requests>=2.24.0
