@@ -118,24 +118,24 @@ figure_6.update_layout(showlegend=False)
 bar_columns = ['satjob', 'relationship', 'male_breadwinner', 'men_bettersuited', 'child_suffer', 'men_overwork'] 
 group_columns = ['sex', 'region', 'education'] 
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.QUARTZ])
 server = app.server
 # app = JupyterDash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(
     [
-        html.H1("Gender Difference within United States"),
+        html.H1("Gender based Wage Gap in United States"),
         
         dcc.Markdown(children = para_1),
         dcc.Markdown(children = para_2),
         
-        html.H2("Gender Difference in Annual Income, Job Prestige, Socioeconomic Status and Years of Formal Education"),
+        html.H2("Gender based Difference in Annual Income, Job Prestige, Socioeconomic Status and Years of Formal Education"),
         
         dcc.Graph(figure = table_data_2),
         
         html.H2("Gender Difference in Level of Agreement for the Male Breadwinner Question"),
-        dcc.Markdown(children = 'Agree or Disagree with: "It is much better for everyone involved if the man \
-        is the achiever outside the home and the woman takes care of the home and family."'),
+        dcc.Markdown(children = 'Agree or Disagree :- "It is much better for everyone involved if the man \
+        is the achiever outside home and woman takes care of home and family."'),
         
         # dcc.Graph(figure=fig3),
         
@@ -147,7 +147,7 @@ app.layout = html.Div(
                          options=[{'label': i, 'value': i} for i in bar_columns],
                          value='male_breadwinner'),
             
-            html.H3("Select the grouping variable you want to use"),
+            html.H3("Select the grouping variable you want to check"),
             
             dcc.Dropdown(id='group',
                          options=[{'label': i, 'value': i} for i in group_columns],
