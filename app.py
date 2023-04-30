@@ -137,8 +137,6 @@ app.layout = html.Div(
         dcc.Markdown(children = 'Agree or Disagree :- "It is much better for everyone involved if the man \
         is the achiever outside home and woman takes care of home and family."'),
         
-        # dcc.Graph(figure=fig3),
-        
         html.Div([
             
             html.H3("Select the variable you want to see. "),
@@ -193,6 +191,5 @@ def make_figure(bar, group):
     return px.bar(table_data_3, x=bar, y='count', color = group, barmode = 'group')
 
 if __name__ == '__main__':
-#     app.run_server(debug=True, port=8051, host='0.0.0.0')
-#     app.run_server(mode='inline', debug=True, port=1234)
+
     app.run_server(debug=True)
