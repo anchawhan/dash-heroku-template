@@ -120,7 +120,6 @@ group_columns = ['sex', 'region', 'education']
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.QUARTZ])
 server = app.server
-# app = JupyterDash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(
     [
